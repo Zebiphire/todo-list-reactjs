@@ -1,38 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  height: 60px;
+  padding: 20px;
+  display: flex;
+  margin-bottom: 30px;
+  width: 1024px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1px #e5e5e5;
+}
+
+.listIcon {
+  flex: 1;
+  color: #5c48d3;
+  height: 100%;
+  margin: 0 0 0 15px;
+}
+
+.header h1 {
+  font-size: 36px;
+  flex: 5;
+  color: #5c48d3;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: row;
+  padding: 50px 20px;
+  width: 500px;
+  height: auto;
+  margin: 0 0 50px 0;
+}
+
+.direction {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+}
+
+.tasks div {
+  display: flex;
+  font-size: 25px;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  margin: 10px;
+}
+
+.checkbox {
+  display: flex;
+  height: 50px;
+  flex: 1;
+  width: 50px;
+  align-items: center;
+  align-content: center;
+}
+
+.tasks span {
+  display: flex;
+  margin-left: 30px;
+  flex: 8;
+  align-items: center;
+  align-content: center;
+}
+
+.remove {
+  display: flex;
+  margin-right: auto;
+  cursor: pointer;
+  color: #5c47d3;
+  flex: 1;
+  height: 40px;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+form {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form input {
+  flex: 3;
+  font-size: 18px;
+  border: 1px solid #5c47d3;
+  height: 45px;
+  border-radius: 5px;
+  background-color: #f2f7fd;
+  padding-left: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.buttonSubmit {
+  background-color: #5c47d3;
   color: white;
+  flex: 1;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.buttonSubmit:hover {
+  border: 1px solid #5c47d3;
+  background-color: white;
+  color: #5c47d3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.footer a {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 5px;
+}
+
+@media (max-width: 1024px) {
+  .App {
+    width: auto;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 576px) {
+  .header {
+    height: 40px;
+    font-size: 24px;
+  }
+  .header h1 {
+    font-size: 24px;
+  }
+  .footer {
+    padding-top: 20px;
   }
 }
